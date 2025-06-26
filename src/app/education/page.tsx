@@ -8,7 +8,7 @@ export default function Education() {
     return (
         <div id="education">
             <div className="p-2 sm:p-10">
-                <h1 className="text-5xl font-bold text-lime-400 text-center">Education Background</h1>
+                <h1 className="text-5xl font-bold text-center">Education Background</h1>
                 <div className="mt-10 flex flex-row flex-wrap gap-4 justify-center items-center">
                     <Card className="w-100">
                         <CardHeader className="flex flex-col items-center gap-2">

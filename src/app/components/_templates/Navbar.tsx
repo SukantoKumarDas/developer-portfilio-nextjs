@@ -4,6 +4,7 @@ import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import CvDownload from "../cv-ddownload";
 import { navLinks } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 type SidebarProps = {
   active: string;
@@ -24,36 +25,34 @@ export default function Navbar({ active, setActiveAction }: SidebarProps) {
     };
     
     return (
-        <div className="block md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger className="w-full h-full bg-stone-700 p-1 flex flex-row-reverse gap-5 items-center">
-                    <MenuIcon className="text-white" size={30}></MenuIcon>
-                    <CvDownload></CvDownload>
-                </SheetTrigger>
-                <SheetContent side="left" className="bg-stone-900 text-white">
-                    <SheetHeader>
-                        <SheetTitle className="mt-10 text-white">
-                            <div className="flex flex-col gap-4 text-lg">
-                                {navLinks.map((link) => (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={(e) => handleLinkClick(e, link.href)}
-                                        className={`hover:text-lime-400 ${
-                                            active === link.href ? "text-lime-400" : ""
-                                        }`}
-                                        >
-                                        {link.label}
-                                    </a>
-                                ))}
-                            </div>
-                        </SheetTitle>
-                        <SheetDescription>
-                        
-                        </SheetDescription>
-                    </SheetHeader>
-                </SheetContent>
-            </Sheet>
-        </div>
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger className="w-full h-full p-2 flex flex-row justify-between items-center">
+                <span className="text-white text-lg font-bold uppercase">Sukanto Kumar Das</span>
+                <MenuIcon className="text-white" size={30}></MenuIcon>
+            </SheetTrigger>
+            <SheetContent side="left" className="bg-stone-900 text-white">
+                <SheetHeader>
+                    <SheetTitle className="mt-10 text-white">
+                        <div className="flex flex-col gap-4 text-lg">
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={(e) => handleLinkClick(e, link.href)}
+                                    className={cn(`hover:text-lime-400 ${
+                                        active === link.href ? "text-lime-400" : ""
+                                    }`, "text-center")}
+                                    >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+                    </SheetTitle>
+                    <SheetDescription>
+                    
+                    </SheetDescription>
+                </SheetHeader>
+            </SheetContent>
+        </Sheet>
     );
 }

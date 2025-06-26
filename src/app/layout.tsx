@@ -27,16 +27,16 @@ export default function RootLayout() {
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${geistSans.variable} ${geistMono.variable} font-times antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header>
           <Menu></Menu>
         </header>
-        <main className="ml-0 md:ml-[300px]">
+        <main >
           <Main></Main>
           <Toaster />
         </main>
-        <footer className="ml-0 md:ml-[300px]">
+        <footer>
           <Footer></Footer>
         </footer>
       </body>
