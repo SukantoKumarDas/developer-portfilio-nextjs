@@ -8,9 +8,9 @@ export type MetaProps = {
 // subject: z.string().optional(),
 // message: z.string().min(1, { message: "Message is required" }),
 export type SendMailReq = {
-    name: string,
-    email?: string,
-    phoneNumber?: string,
-    subject?: string,
-    message: string,
-}
+    name: string;
+    email?: string;
+    phoneNumber?: string;
+    subject?: string;
+    message: string;
+};

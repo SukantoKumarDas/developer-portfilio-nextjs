@@ -1,10 +1,10 @@
-import { MailIcon } from "lucide-react";
-import ContactForm from "./_form/ContactForm";
-import Image from "next/image";
+import { MailIcon } from 'lucide-react';
+import ContactForm from './_form/ContactForm';
+import Image from 'next/image';
 import Email from '@/../public/assets/logo/email.png';
 import Phone from '@/../public/assets/logo/phone.png';
 import Location from '@/../public/assets/logo/location.png';
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function ContactMe() {
     return (
@@ -12,7 +12,9 @@ export default function ContactMe() {
             <div className="py-10 lg:py-20 max-w-7xl mx-auto relative space-y-10">
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-3xl lg:text-5xl font-bold text-center">Contact Me</h1>
-                    <span className="text-baese lg:text-lg text-center italic">I am always opne to collaborate</span>
+                    <span className="text-baese lg:text-lg text-center italic">
+                        I am always opne to collaborate
+                    </span>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-2">
                     <div className="grid-cols-1">
@@ -22,7 +24,9 @@ export default function ContactMe() {
                         <Card>
                             <CardContent>
                                 <div className="flex flex-col justify-center items-center gap-6">
-                                    <h1 className="w-full text-3xl font-bold text-center">Contact Information</h1>
+                                    <h1 className="w-full text-3xl font-bold text-center">
+                                        Contact Information
+                                    </h1>
                                     <div className="flex flex-col items-center">
                                         <div className="flex flex-row items-center gap-2">
                                             <Image alt="email" src={Email} height={24}></Image>

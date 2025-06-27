@@ -1,7 +1,7 @@
-"use client";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { RefreshCcwIcon } from "lucide-react";
+'use client';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import { RefreshCcwIcon } from 'lucide-react';
 
 export default function ActionButton({
     type,
@@ -10,7 +10,7 @@ export default function ActionButton({
     className,
     onClick,
 }: {
-    type: "submit" | "button" | "reset";
+    type: 'submit' | 'button' | 'reset';
     pending: boolean;
     children: string;
     className?: string;
@@ -21,7 +21,7 @@ export default function ActionButton({
             name="submit"
             type={type}
             onClick={onClick}
-            className={cn("w-full bg-primary text-zinc-100", className)}
+            className={cn('w-full bg-primary text-zinc-100', className)}
             disabled={pending}
         >
             {pending ? (

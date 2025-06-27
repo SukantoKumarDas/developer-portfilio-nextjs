@@ -1,14 +1,14 @@
-import { SendMailReq } from "./types";
+import { SendMailReq } from './types';
 import nodemailer from 'nodemailer';
 
 export async function sendMail(req: SendMailReq) {
-    const {name, email, phoneNumber, subject, message } = req;
+    const { name, email, phoneNumber, subject, message } = req;
 
     const transporter = nodemailer.createTransport({
-        service: "gmail", // or use your SMTP
+        service: 'gmail', // or use your SMTP
         auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
     });
 
@@ -16,11 +16,11 @@ export async function sendMail(req: SendMailReq) {
     const ownerMailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_RECEIVER,
-        subject: subject || "New Contact Form Message",
+        subject: subject || 'New Contact Form Message',
         text: `
 Name: ${name ?? 'anonyumous'}
-Email: ${email || "N/A"}
-Phone: ${phoneNumber || "N/A"}
+Email: ${email || 'N/A'}
+Phone: ${phoneNumber || 'N/A'}
 Message: ${message}
         `,
     };
@@ -29,7 +29,7 @@ Message: ${message}
     const userMailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: "Thank you for contacting me!",
+        subject: 'Thank you for contacting me!',
         text: `Hi ${name},
 
 Thank you for reaching me out. I have received your message and will get back to you shortly.
@@ -46,11 +46,11 @@ Sukanto Kumar Das`,
     try {
         await transporter.sendMail(ownerMailOptions);
         if (email) {
-        await transporter.sendMail(userMailOptions);
+            await transporter.sendMail(userMailOptions);
         }
         return true;
     } catch (error) {
-        console.error("Error sending email:", error);
+        console.error('Error sending email:', error);
         return false;
     }
 }

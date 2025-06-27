@@ -1,29 +1,36 @@
-'use client'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
-import { useState } from "react";
-import CvDownload from "../CvDownloadButton";
-import { navLinks } from "@/lib/data";
-import CustomLink from "../CustomLink";
+'use client';
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from '@/components/ui/sheet';
+import { MenuIcon } from 'lucide-react';
+import { useState } from 'react';
+import CvDownload from '../CvDownloadButton';
+import { navLinks } from '@/lib/data';
+import CustomLink from '../CustomLink';
 
 type SidebarProps = {
-  active: string;
-  setActiveAction: (href: string) => void;
+    active: string;
+    setActiveAction: (href: string) => void;
 };
 
 export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault(); // Prevent default anchor behavior
+        e.preventDefault(); // Prevent default anchor behavior
         const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
+            target.scrollIntoView({ behavior: 'smooth' });
         }
         setActiveAction(href);
         setIsOpen(false);
     };
-    
+
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger className="w-full h-full p-2 flex flex-row justify-between items-center">
@@ -34,8 +41,8 @@ export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
                 <SheetHeader>
                     <SheetTitle className="mt-10 text-white">
                         <div className="flex flex-col gap-4 text-lg">
-                            {navLinks.map((link) => (
-                                <CustomLink 
+                            {navLinks.map(link => (
+                                <CustomLink
                                     key={link.href}
                                     link={link.href}
                                     active={active}
@@ -46,9 +53,7 @@ export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
                             <CvDownload />
                         </div>
                     </SheetTitle>
-                    <SheetDescription>
-                    
-                    </SheetDescription>
+                    <SheetDescription></SheetDescription>
                 </SheetHeader>
             </SheetContent>
         </Sheet>

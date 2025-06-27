@@ -9,10 +9,12 @@ export default async function Footer() {
                     </div>
                     <div className="col-span-1 flex flex-col justify-center items-center sm:items-end space-y-2">
                         <span className="text-white">Last updated: 12th june 2025</span>
-                        <span className="text-white">© 2025 Sukanto Kumar Das. All rights reserved.</span>
+                        <span className="text-white">
+                            © 2025 Sukanto Kumar Das. All rights reserved.
+                        </span>
                     </div>
                 </div>
             </div>
         </footer>
-    )
+    );
 }

@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 import uniLogo from '@/../public/assets/images/uni.png';
 import collegeLogo from '@/../public/assets/images/college.png';
 import schoolLogo from '@/../public/assets/images/school.png';
@@ -13,8 +13,12 @@ export default function Education() {
                     <Card className="w-100">
                         <CardHeader className="flex flex-col items-center gap-2">
                             <Image alt="School logo" src={uniLogo} height={200}></Image>
-                            <CardTitle className="text-sm mt-2">Shahjalal University of Science and Technology</CardTitle>
-                            <CardDescription>B. Sc. in Computer Science and Engineering</CardDescription>
+                            <CardTitle className="text-sm mt-2">
+                                Shahjalal University of Science and Technology
+                            </CardTitle>
+                            <CardDescription>
+                                B. Sc. in Computer Science and Engineering
+                            </CardDescription>
                         </CardHeader>
                         <CardContent className="flex flex-col items-center gap-2">
                             <p> Batch of : 2017-18</p>
@@ -37,7 +41,9 @@ export default function Education() {
                     <Card className="w-100">
                         <CardHeader className="flex flex-col items-center gap-2">
                             <Image alt="School logo" src={schoolLogo} height={200}></Image>
-                            <CardTitle className="text-sm mt-2">Saint Josephe&lsquo;s High School Khulna</CardTitle>
+                            <CardTitle className="text-sm mt-2">
+                                Saint Josephe&lsquo;s High School Khulna
+                            </CardTitle>
                             <CardDescription>Secoendary School Certificate</CardDescription>
                         </CardHeader>
                         <CardContent className="flex flex-col items-center gap-2">
