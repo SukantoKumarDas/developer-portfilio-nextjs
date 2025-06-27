@@ -5,7 +5,7 @@ import ViewCV from "@/app/view-cv/ViewCV";
 
 export default function Main() {
     return(
-        <div className="bg-[url('/assets/images/body-bg.jpg')]">
+        <div className="mt-[46px] lg:mt-[68px] bg-[url('/assets/images/body-bg.jpg')]">
             <Home></Home>
             <Education></Education>
             <ViewCV></ViewCV>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 import CvDownload from "../cv-ddownload";
-import { cn } from "@/lib/utils";
+import CustomLink from "../CustomLink";
 
 type NavbarProps = {
   active: string;
@@ -37,19 +37,13 @@ export default function NavbarLarge({ active, setActiveAction }: NavbarProps) {
       {/* Nav Links */}
       <div className="flex gap-6 text-lg">
         {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={(e) => handleLinkClick(e, link.href)}
-            className={cn(
-              `hover:text-lime-400 ${
-                active === link.href ? "text-lime-400" : ""
-              }`,
-              "text-base"
-            )}
-          >
-            {link.label}
-          </a>
+          <CustomLink
+              key={link.href}
+              link={link.href}
+              active={active}
+              label={link.label}
+              handleLinkClick={handleLinkClick}
+          ></CustomLink>
         ))}
       </div>
 

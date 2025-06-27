@@ -32,7 +32,7 @@ export default function RootLayout() {
         <header>
           <Menu></Menu>
         </header>
-        <main >
+        <main>
           <Main></Main>
           <Toaster />
         </main>

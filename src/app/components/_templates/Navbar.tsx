@@ -4,7 +4,7 @@ import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import CvDownload from "../cv-ddownload";
 import { navLinks } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import CustomLink from "../CustomLink";
 
 type SidebarProps = {
   active: string;
@@ -35,17 +35,15 @@ export default function Navbar({ active, setActiveAction }: SidebarProps) {
                     <SheetTitle className="mt-10 text-white">
                         <div className="flex flex-col gap-4 text-lg">
                             {navLinks.map((link) => (
-                                <a
+                                <CustomLink 
                                     key={link.href}
-                                    href={link.href}
-                                    onClick={(e) => handleLinkClick(e, link.href)}
-                                    className={cn(`hover:text-lime-400 ${
-                                        active === link.href ? "text-lime-400" : ""
-                                    }`, "text-center")}
-                                    >
-                                    {link.label}
-                                </a>
+                                    link={link.href}
+                                    active={active}
+                                    label={link.label}
+                                    handleLinkClick={handleLinkClick}
+                                ></CustomLink>
                             ))}
+                            <CvDownload />
                         </div>
                     </SheetTitle>
                     <SheetDescription>
