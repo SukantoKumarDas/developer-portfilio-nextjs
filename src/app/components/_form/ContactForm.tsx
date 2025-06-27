@@ -50,11 +50,7 @@ export default function ContactForm() {
 
     return (
         <Form {...form}>
-            <div>
-                <h1 className="text-5xl font-bold">Contact Me</h1>
-                <span className="text-xl">I would like to here from you.</span>
-            </div>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-2xl mx-2 sm:mx-auto space-y-6 p-6 bg-white rounded-xl shadow-lg">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6 p-5 border-2 rounded-2xl">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <FormField
                     control={form.control}
@@ -62,7 +58,7 @@ export default function ContactForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Input placeholder="Your Name" className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-lime-500 focus:ring-lime-500 transition" {...field} />
+                                <Input placeholder="Your Name*" className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-lime-500 focus:ring-lime-500 transition" {...field} />
                             </FormControl>
                             <FormMessage className="text-sm text-red-500 mt-1" />
                         </FormItem>
@@ -121,14 +117,16 @@ export default function ContactForm() {
                 render={({ field }) => (
                     <FormItem>
                         <FormControl>
-                            <Textarea placeholder="Your Message" rows={3} className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-lime-500 focus-visible:border-lime-400 focus-visible:ring-lime-400 focus:ring-lime-500 transition" {...field} />
+                            <Textarea 
+                                placeholder="Type your message here*"
+                                className="min-h-[134px] max-h-[134px] overflow-y-auto  bg-white border border-gray-300 rounded-md px-4 py-2" {...field} />
                         </FormControl>
                         <FormMessage className="text-sm text-red-500 mt-1" />
                     </FormItem>
                 )}
                 />
                 <div className="flex flex-row-reverse">
-                    <ActionButton pending={isPending} type="submit" className="w-full sm:w-30 bg-lime-500 hover:bg-lime-600 text-white font-semibold px-6 py-2 rounded-md transition">Send Now</ActionButton>
+                    <ActionButton pending={isPending} type="submit" className="w-full sm:w-30 text-white font-semibold px-6 py-2 rounded-md transition">Send Now</ActionButton>
                 </div>
             </form>
         </Form>

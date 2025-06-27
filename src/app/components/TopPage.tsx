@@ -39,7 +39,7 @@ export default function TopPage() {
                     </div>
                     <div className="col-span-1">
                         <div className="h-full flex flex-col gap-10 justify-center items-center lg:items-end">
-                            <Image alt="My Image" src={myImage} height={400} width={400} className="border-4 border-lime-400 rounded-full object-cover "></Image>
+                            <Image alt="My Image" src={myImage} height={400} width={400} className="border-4 border-lime-400 rounded-full object-cover transition-all duration-300 hover:scale-105"></Image>
                                 
                             <div className="w-100 flex flex-row justify-center items-center gap-10">
                                 <Link href={""} className="border-1 border-lime-400 inline-block p-2 rounded-sm transition-all duration-150 hover:scale-105">

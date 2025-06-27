@@ -7,9 +7,9 @@ import schoolLogo from '@/../public/assets/images/school.png';
 export default function Education() {
     return (
         <div id="education">
-            <div className="p-2 sm:p-10">
-                <h1 className="text-5xl font-bold text-center">Education Background</h1>
-                <div className="mt-10 flex flex-row flex-wrap gap-4 justify-center items-center">
+            <div className="py-10 lg:py-20 max-w-7xl mx-auto relative space-y-10">
+                <h1 className="text-3xl lg:text-5xl font-bold text-center">Education Background</h1>
+                <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
                     <Card className="w-100">
                         <CardHeader className="flex flex-col items-center gap-2">
                             <Image alt="School logo" src={uniLogo} height={200}></Image>
