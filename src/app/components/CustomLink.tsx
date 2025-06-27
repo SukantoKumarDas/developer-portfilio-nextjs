@@ -5,7 +5,7 @@ type CustomLinkProps = {
     link?: string;
     active?: string;
     label?: string;
-    handleLinkClick?: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
+    handleLinkClick: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
     className?: string;
 };
 export default function CustomLink(props: CustomLinkProps) {
