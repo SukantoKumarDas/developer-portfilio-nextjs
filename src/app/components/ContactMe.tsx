@@ -1,4 +1,3 @@
-import { MailIcon } from 'lucide-react';
 import ContactForm from './_form/ContactForm';
 import Image from 'next/image';
 import Email from '@/../public/assets/logo/email.png';
