@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
-import CvDownload from "../cv-ddownload";
+import CvDownload from "../CvDownloadButton";
 import CustomLink from "../CustomLink";
 
 type NavbarProps = {

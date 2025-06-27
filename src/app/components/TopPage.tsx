@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { GithubIcon, Linkedin, MailIcon } from "lucide-react";
 
-export default function Home() {
+export default function TopPage() {
     return (
-        <div id="home" className="text-white font-bold bg-[url('/assets/images/top-bg.jpg')] h-auto">
+        <div id="home" className="text-white font-bold bg-[url('/assets/images/top-bg.jpg')] h-auto mt-[46px] lg:mt-[68px]">
             <div className="max-w-7xl mx-auto relative">
                 <div className="px-2 lg:px-8 py-10 lg:py-0 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0">
                     <div className="col-span-1">

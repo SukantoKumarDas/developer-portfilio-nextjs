@@ -1,8 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import uniLogo from '@/../public/assets/images/uni.png'
-import collegeLogo from '@/../public/assets/images/college.png'
-import schoolLogo from '@/../public/assets/images/school.png'
+import uniLogo from '@/../public/assets/images/uni.png';
+import collegeLogo from '@/../public/assets/images/college.png';
+import schoolLogo from '@/../public/assets/images/school.png';
 
 export default function Education() {
     return (

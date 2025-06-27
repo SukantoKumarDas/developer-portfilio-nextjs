@@ -2,7 +2,7 @@
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
-import CvDownload from "../cv-ddownload";
+import CvDownload from "../CvDownloadButton";
 import { navLinks } from "@/lib/data";
 import CustomLink from "../CustomLink";
 
@@ -11,7 +11,7 @@ type SidebarProps = {
   setActiveAction: (href: string) => void;
 };
 
-export default function Navbar({ active, setActiveAction }: SidebarProps) {
+export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {

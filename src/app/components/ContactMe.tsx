@@ -1,8 +1,9 @@
 import { MailIcon } from "lucide-react";
-import ContactForm from "../_form/ContactForm";
+import ContactForm from "./_form/ContactForm";
 import Image from "next/image";
-import Email from '@/../public/assets/logo/email.png'
-import Phone from '@/../public/assets/logo/phone.png'
+import Email from '@/../public/assets/logo/email.png';
+import Phone from '@/../public/assets/logo/phone.png';
+import Location from '@/../public/assets/logo/location.png';
 
 export default function ContactMe() {
     return (
@@ -26,7 +27,7 @@ export default function ContactMe() {
                     </div>
                     <div className="flex flex-col items-center md:items-baseline">
                         <div className="flex flex-row items-center gap-2">
-                            <MailIcon className="text-lime-400 font-bold" size={24} />
+                            <Image alt="email" src={Location} height={24}></Image>
                             <h1 className="text-2xl font-bold">Location</h1>
                         </div>
                         <p className="text-wrap">Flat-A1, Road-14, Block-A,</p>
