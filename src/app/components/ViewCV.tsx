@@ -1,11 +1,5 @@
 "use client";
 export default function ViewCV() {
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = '/file/Sukanto_CSE_SUST.pdf';
-        link.download = 'Sukanto_CSE_SUST.pdf';
-        link.click();
-    };
 
     return (
         <div id="view-cv" className="py-16 lg:py-20 max-w-6xl mx-auto px-4 scroll-mt-[44px] lg:scroll-mt-[68px]">

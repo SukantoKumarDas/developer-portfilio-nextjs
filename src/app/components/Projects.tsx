@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Bookmark, BookMarkedIcon, ExternalLinkIcon, Github, GithubIcon, LinkIcon } from "lucide-react";
+import { BookMarkedIcon, ExternalLinkIcon, Github, GithubIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Projects() {
