@@ -17,6 +17,7 @@ A sleek, modern, and fully responsive single-page portfolio built with **Next.js
 
 ## 📁 Project Structure
 
+```
 my-portfolio/
 │
 ├── app/ # App Router (Next.js 13+)
@@ -36,6 +37,7 @@ my-portfolio/
 ├── tsconfig.json # TypeScript settings
 ├── .env.local # Environment variables (not committed)
 └── README.md # Project documentation
+```
 
 ---
 
@@ -43,39 +45,37 @@ my-portfolio/
 
 ### 1. Clone the Repository
 
-```bash
+```
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
+```
 
-2. Install Dependencies
+### 2. Install Dependencies
+
 Using npm:
 
-bash
-Copy
-Edit
+```
 npm install
+```
 Or yarn:
-
-bash
-Copy
-Edit
+```
 yarn
-3. Environment Variables
+```
+### 3. Environment Variables
 Create a .env.local file in the root and add:
-
-env
-Copy
-Edit
+```
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_email_password_or_app_password
 EMAIL_TO=your_email@example.com
+```
+
 ⚠️ If using Gmail, enable "App Passwords" and use that instead of your login password.
 
-4. Start the Development Server
-bash
-Copy
-Edit
+### 4. Start the Development Server
+
+```
 npm run dev
+```
 Visit http://localhost:3000 to view your portfolio.
 
 🛠 Tech Stack
