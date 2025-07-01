@@ -2,83 +2,115 @@ import Image from 'next/image';
 import myImage from '@/../public/assets/images/MyImage.png';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { GithubIcon, Linkedin, MailIcon } from 'lucide-react';
+import { GithubIcon, Linkedin, MailIcon, Sparkles } from 'lucide-react';
 
 export default function TopPage() {
     return (
         <div
             id="home"
-            className="text-white font-bold bg-[url('/assets/images/top-bg.jpg')] h-auto mt-[46px] lg:mt-[68px]"
+            className="text-white font-bold bg-gradient-to-br from-zinc-800 to-zinc-900 min-h-screen"
         >
-            <div className="max-w-7xl mx-auto relative">
-                <div className="px-2 lg:px-8 py-10 lg:py-0 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0">
-                    <div className="col-span-1">
-                        <div className="py-0 lg:py-50 flex flex-col justify-center items-center lg:items-start gap-6">
-                            <span className="text-3xl sm:text-5xl text-lime-400">
-                                Hello I&apos;m
+            <div className="max-w-7xl mx-auto">
+                <div className="px-4 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+                    
+                    {/* Left Column */}
+                    <div className="space-y-8 text-center lg:text-left">
+                        
+                        {/* Greeting */}
+                        <div className="flex items-center justify-center lg:justify-start gap-3">
+                            <Sparkles className="text-indigo-400" size={20} />
+                            <span className="text-xl sm:text-2xl text-indigo-400 font-normal">
+                                Hello, I&apos;m
                             </span>
-                            <h1 className="text-3xl lg:text-5xl mb-0 lg:mb-10 uppercase">
-                                Sukanto Kumar Das
-                            </h1>
-                            <div className="flex flex-col sm:flex-row items-center lg:items-end gap-0 lg:gap-2 mb-0 lg:mb-10">
-                                <span className="text-xl">A Passionate</span>
-                                <span className="text-4xl text-lime-400">Programmer</span>
-                            </div>
-                            <div className="flex flex-wrap justify-center items-center gap-6">
-                                <div className="px-4 py-2 border border-lime-400 rounded-md text-center transition-all duration-150 hover:scale-105">
-                                    <h3 className="text-2xl text-lime-400 font-bold">10+</h3>
-                                    <p className="text-sm">Projects Completed</p>
-                                </div>
-                                <div className="px-4 py-2 border border-lime-400 rounded-md text-center transition-all duration-150 hover:scale-105">
-                                    <h3 className="text-2xl text-lime-400 font-bold">2+</h3>
-                                    <p className="text-sm">Years Experience</p>
-                                </div>
-                                <div className="px-4 py-2 border border-lime-400 rounded-md text-center transition-all duration-150 hover:scale-105">
-                                    <h3 className="text-2xl text-lime-400 font-bold">12+</h3>
-                                    <p className="text-sm">Technology Mastered</p>
-                                </div>
-                            </div>
+                        </div>
 
+                        {/* Name - More prominent */}
+                        <h1 className="text-4xl lg:text-6xl font-black uppercase leading-tight">
+                            Sukanto Kumar Das
+                        </h1>
+
+                        {/* Role */}
+                        <div className="text-xl lg:text-2xl">
+                            <span className="text-gray-300 font-normal">A Passionate </span>
+                            <span className="text-indigo-500 font-bold">Programmer</span>
+                        </div>
+
+                        {/* Description - Shorter and punchier */}
+                        <p className="text-gray-400 text-lg font-normal max-w-md mx-auto lg:mx-0">
+                            Building digital solutions with clean code and creativity.
+                        </p>
+
+                        {/* Stats - Simplified */}
+                        <div className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                            {[
+                                { number: "10+", label: ["Projects", " Completed"] },
+                                { number: "2+", label: ["Years", " Experience"] },
+                                { number: "12+", label: ["Technologies", " Mastered"] },
+                            ].map((stat, index) => (
+                                <div key={index} className="text-center p-4 bg-zinc-800 rounded-lg border border-zinc-700 hover:border-indigo-400/50 hover:scale-105 transition-colors">
+                                    <h3 className="text-2xl text-indigo-400 font-bold mb-1">
+                                        {stat.number}
+                                    </h3>
+                                    <p className="text-sm text-gray-300 leading-tight">
+                                        {stat.label[0]}
+                                    </p>
+                                    <p className="text-sm text-gray-300 leading-tight">
+                                        {stat.label[1]}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* CTA Button - Cleaner */}
+                        <div className="pt-4">
                             <Button
                                 variant="outline"
-                                className="bg-transparent  hover:bg-transparent hover:border-lime-400 hover:text-lime-400 w-40 transition-all duration-150 hover:scale-105"
+                                className="border-2 bg-transparent border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-black px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-200"
                             >
-                                <a href={'#contact'} className="text-xl font-bold">
-                                    SAY HELLO !
+                                <a href={'#contact'}>
+                                    Let&apos;s Connect
                                 </a>
                             </Button>
                         </div>
                     </div>
-                    <div className="col-span-1">
-                        <div className="h-full flex flex-col gap-10 justify-center items-center lg:items-end">
-                            <Image
-                                alt="My Image"
-                                src={myImage}
-                                height={400}
-                                width={400}
-                                className="border-4 border-lime-400 rounded-full object-cover transition-all duration-300 hover:scale-105"
-                            ></Image>
 
-                            <div className="w-100 flex flex-row justify-center items-center gap-10">
-                                <Link
-                                    href={''}
-                                    className="border-1 border-lime-400 inline-block p-2 rounded-sm transition-all duration-150 hover:scale-105"
-                                >
-                                    <MailIcon size={32}></MailIcon>
-                                </Link>
-                                <Link
-                                    href={''}
-                                    className="border-1 border-lime-400 inline-block p-2 rounded-sm transition-all duration-150 hover:scale-105"
-                                >
-                                    <Linkedin size={32}></Linkedin>
-                                </Link>
-                                <Link
-                                    href={''}
-                                    className="border-1 border-lime-400 inline-block p-2 rounded-sm transition-all duration-150 hover:scale-105"
-                                >
-                                    <GithubIcon size={32}></GithubIcon>
-                                </Link>
-                            </div>
+                    {/* Right Column */}
+                    <div className="flex flex-col items-center lg:items-end gap-8">
+                        
+                        {/* Profile Image - Cleaner */}
+                        <div className="relative">
+                            <Image
+                                alt="Sukanto Kumar Das"
+                                src={myImage}
+                                height={380}
+                                width={380}
+                                className="border-3 border-indigo-400 rounded-full object-cover hover:scale-[1.02] transition-transform duration-300"
+                            />
+                        </div>
+
+                        {/* Social Links - Simplified */}
+                        <div className="w-auto lg:w-95 flex gap-4 justify-center">
+                            <Link
+                                href={''}
+                                className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
+                                aria-label="Email"
+                            >
+                                <MailIcon size={24} />
+                            </Link>
+                            <Link
+                                href={''}
+                                className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
+                                aria-label="LinkedIn"
+                            >
+                                <Linkedin size={24} />
+                            </Link>
+                            <Link
+                                href={''}
+                                className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
+                                aria-label="GitHub"
+                            >
+                                <GithubIcon size={24} />
+                            </Link>
                         </div>
                     </div>
                 </div>

@@ -63,7 +63,7 @@ export default function ContactForm() {
                                 <FormControl>
                                     <Input
                                         placeholder="Your Name*"
-                                        className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-lime-500 focus:ring-lime-500 transition"
+                                        className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-indigo-500 focus:ring-indigo-500 transition"
                                         {...field}
                                     />
                                 </FormControl>
@@ -79,7 +79,7 @@ export default function ContactForm() {
                                 <FormControl>
                                     <Input
                                         placeholder="Subject"
-                                        className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-lime-500 focus:ring-lime-500 transition"
+                                        className="bg-white border border-gray-300 rounded-md px-4 py-2 focus:border-indigo-500 focus:ring-indigo-500 transition"
                                         {...field}
                                     />
                                 </FormControl>
@@ -100,7 +100,7 @@ export default function ContactForm() {
                                         />
                                         <Input
                                             placeholder="Your Phone Number"
-                                            className="bg-white border border-gray-300 rounded-md px-10 py-2 focus:border-lime-500 focus:ring-lime-500 transition"
+                                            className="bg-white border border-gray-300 rounded-md px-10 py-2 focus:border-indigo-500 focus:ring-indigo-500 transition"
                                             {...field}
                                         />
                                     </div>
@@ -122,7 +122,7 @@ export default function ContactForm() {
                                         />
                                         <Input
                                             placeholder="Your Email"
-                                            className="bg-white border border-gray-300 rounded-md px-10 py-2 focus:border-lime-500 focus:ring-lime-500 transition"
+                                            className="bg-white border border-gray-300 rounded-md px-10 py-2 focus:border-indigo-500 focus:ring-indigo-500 transition"
                                             {...field}
                                         />
                                     </div>

@@ -8,28 +8,27 @@ import {
     SheetTrigger,
 } from '@/components/ui/sheet';
 import { MenuIcon } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CvDownload from '../CvDownloadButton';
 import { navLinks } from '@/lib/data';
 import CustomLink from '../CustomLink';
 
-type SidebarProps = {
-    active: string;
-    setActiveAction: (href: string) => void;
-};
 
-export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
+export default function NavbarSmall() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault(); // Prevent default anchor behavior
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+    const [hash, setHash] = useState<string>('');
+        
+    useEffect(() => {
+        const updateHash = () => {
+            setHash(window.location.hash)
+            setIsOpen(false)
         }
-        setActiveAction(href);
-        setIsOpen(false);
-    };
+        updateHash()
+        window.addEventListener('hashchange', updateHash)
+
+        return () => window.removeEventListener('hashchange', updateHash)
+    }, [])
 
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -45,9 +44,8 @@ export default function NavbarSmall({ active, setActiveAction }: SidebarProps) {
                                 <CustomLink
                                     key={link.href}
                                     link={link.href}
-                                    active={active}
+                                    active={hash}
                                     label={link.label}
-                                    handleLinkClick={handleLinkClick}
                                 ></CustomLink>
                             ))}
                             <CvDownload />

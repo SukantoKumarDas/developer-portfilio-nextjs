@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧑‍💻 Sukanto Kumar Das – Portfolio
 
-## Getting Started
+A sleek, modern, and fully responsive single-page portfolio built with **Next.js**, styled using **Tailwind CSS**, and enhanced with **Shadcn UI components**. It includes a functional contact form powered by **Nodemailer** for sending emails directly from the site.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- ⚡ Built with Next.js for high performance
+- 💅 Styled using Tailwind CSS
+- 🧱 Reusable UI components from Shadcn
+- 📬 Functional contact form with Nodemailer
+- 📱 Fully responsive across all screen sizes
+- 🌐 SEO friendly and optimized for speed
+
+---
+
+## 📁 Project Structure
+
+my-portfolio/
+│
+├── app/ # App Router (Next.js 13+)
+│ ├── components/ # Reusable UI components
+│ ├── page.tsx # Main portfolio page
+│ └── api/
+│ └── contact/
+│ └── route.ts # Contact form backend using Nodemailer
+│
+├── public/ # Static files (images, favicons, etc.)
+├── styles/ # Global styles (if needed)
+├── lib/
+│ └── mailer.ts # Nodemailer setup
+├── tailwind.config.ts # Tailwind configuration
+├── postcss.config.js # PostCSS configuration
+├── next.config.js # Next.js config
+├── tsconfig.json # TypeScript settings
+├── .env.local # Environment variables (not committed)
+└── README.md # Project documentation
+
+---
+
+## 🧩 Installation & Setup
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+
+2. Install Dependencies
+Using npm:
+
+bash
+Copy
+Edit
+npm install
+Or yarn:
+
+bash
+Copy
+Edit
+yarn
+3. Environment Variables
+Create a .env.local file in the root and add:
+
+env
+Copy
+Edit
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password_or_app_password
+EMAIL_TO=your_email@example.com
+⚠️ If using Gmail, enable "App Passwords" and use that instead of your login password.
+
+4. Start the Development Server
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to view your portfolio.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠 Tech Stack
+Next.js – React Framework
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tailwind CSS – Utility-first CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Shadcn UI – UI component library
 
-## Learn More
+Nodemailer – For email sending (contact form)
 
-To learn more about Next.js, take a look at the following resources:
+TypeScript – Type safety and cleaner code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧪 Deployment
+You can deploy this portfolio easily with Vercel (recommended for Next.js).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📬 Contact
+You can reach me via the contact form on the website or email me directly at:
 
-## Deploy on Vercel
+css
+Copy
+Edit
+your_email@example.com
+📄 License
+This project is open source and available under the MIT License.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+yaml
+Copy
+Edit
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Let me know if you'd like:
+- A copy as a downloadable file
+- A version with real email or repo links
+- Added badges (e.g., Vercel, GitHub stars, etc.)
+
+I'm happy to adjust it!

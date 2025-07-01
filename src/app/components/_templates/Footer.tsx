@@ -4,7 +4,7 @@ export default async function Footer() {
             <div className="max-w-7xl mx-auto">
                 <div className="p-4 grid grid-cols-1 sm:grid-cols-2 space-y-2">
                     <div className="col-span-1 flex flex-col justify-center items-center sm:items-start space-y-2">
-                        <span className="text-indigo-400 text-lg font-bold">Sukanto Kumar Das</span>
+                        <span className="text-lg font-bold bg-gradient-to-br from-indigo-500 to-indigo-400 bg-clip-text text-transparent">Sukanto Kumar Das</span>
                         <span className="text-indigo-500 white font-bold">Web Developer</span>
                     </div>
                     <div className="col-span-1 flex flex-col justify-center items-center sm:items-end space-y-2">

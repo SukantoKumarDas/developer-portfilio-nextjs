@@ -4,28 +4,30 @@ import Link from 'next/link';
 import { navLinks } from '@/lib/data';
 import CvDownload from '../CvDownloadButton';
 import CustomLink from '../CustomLink';
+import { useEffect, useState } from 'react';
 
-type NavbarProps = {
-    active: string;
-    setActiveAction: (href: string) => void;
-};
-
-export default function NavbarLarge({ active, setActiveAction }: NavbarProps) {
-    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+export default function NavbarLarge() {
+    const [hash, setHash] = useState<string>('');
+    
+    useEffect(() => {
+        const updateHash = () => {
+            setHash(window.location.hash)
         }
-        setActiveAction(href);
-    };
+
+        // Get the hash on initial render
+        updateHash()
+
+        // Update hash when it changes (e.g. when navigating)
+        window.addEventListener('hashchange', updateHash)
+
+        return () => window.removeEventListener('hashchange', updateHash)
+    }, [])
 
     return (
         <div className="left-0 w-full py-4 px-8 flex justify-between items-center text-white font-bold z-50 shadow-md">
             {/* Logo */}
             <Link
                 href="#home"
-                onClick={() => setActiveAction('#home')}
                 className="uppercase text-2xl"
             >
                 Sukanto Kumar Das
@@ -37,9 +39,8 @@ export default function NavbarLarge({ active, setActiveAction }: NavbarProps) {
                     <CustomLink
                         key={link.href}
                         link={link.href}
-                        active={active}
+                        active={hash}
                         label={link.label}
-                        handleLinkClick={handleLinkClick}
                     ></CustomLink>
                 ))}
             </div>
