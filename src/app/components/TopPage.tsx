@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import myImage from '@/../public/assets/images/MyImage.png';
+import myImage from '@/../public/assets/images/school.png';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GithubIcon, Linkedin, MailIcon, Sparkles } from 'lucide-react';
@@ -8,10 +8,10 @@ export default function TopPage() {
     return (
         <div
             id="home"
-            className="text-white font-bold bg-gradient-to-br from-zinc-800 to-zinc-900 min-h-screen"
+            className="text-white font-bold bg-gradient-to-br from-zinc-800 to-zinc-900 scroll-mt-[44px] lg:scroll-mt-[68px]"
         >
             <div className="max-w-7xl mx-auto">
-                <div className="px-4 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+                <div className="px-4 lg:px-8 py-5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
                     
                     {/* Left Column */}
                     <div className="space-y-8 text-center lg:text-left">
@@ -84,7 +84,7 @@ export default function TopPage() {
                                 src={myImage}
                                 height={380}
                                 width={380}
-                                className="border-3 border-indigo-400 rounded-full object-cover hover:scale-[1.02] transition-transform duration-300"
+                                className="border-3 [radial-gradient(circle,indigo-400, indigo-300)] border-indigo-400 rounded-full object-cover hover:scale-[1.02] transition-transform duration-300"
                             />
                         </div>
 

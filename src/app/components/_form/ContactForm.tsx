@@ -152,7 +152,7 @@ export default function ContactForm() {
                     <ActionButton
                         pending={isPending}
                         type="submit"
-                        className="w-full sm:w-30 text-white font-semibold px-6 py-2 rounded-md transition"
+                        className="w-full sm:w-30  bg-indigo-400 hover:bg-indigo-300 font-bold px-6 py-2 rounded-md transition"
                     >
                         Send Now
                     </ActionButton>

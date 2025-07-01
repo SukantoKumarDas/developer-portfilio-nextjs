@@ -30,13 +30,10 @@ export default function Education() {
     ];
 
     return (
-        <div id="education" className="py-16 lg:py-24 bg-zinc-50">
+        <div id="education" className="py-16 lg:py-24 scroll-mt-[44px] lg:scroll-mt-[68px]">
             <div className="max-w-6xl mx-auto px-4 lg:px-8">
                 
-                {/* Section Title */}
-                <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-                    Education Background
-                </h2>
+                <h1 className="mb-12 text-4xl font-bold text-center text-gray-800">Education Background</h1>
 
                 {/* Education Items */}
                 <div className="space-y-12">
@@ -65,7 +62,7 @@ export default function Education() {
                                 <p className="text-gray-500">
                                     {edu.period}
                                 </p>
-                                <p className="text-lg text-indigo-600 font-semibold">
+                                <p className="text-indigo-600 font-semibold">
                                     {edu.grade}
                                 </p>
                                 {edu.description && (

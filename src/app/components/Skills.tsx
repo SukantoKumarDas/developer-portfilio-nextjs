@@ -15,7 +15,7 @@ export default function Skills() {
         },
         "Database": {
             icon: <Database className="w-6 h-6" />,
-            skills: ["MySQL", "MongoDB"],
+            skills: ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Redis"],
             color: "from-orange-500 to-red-600"
         },
         "Developer Tools": {
@@ -26,11 +26,11 @@ export default function Skills() {
     };
 
     return (
-        <div id="skills" className="py-16 max-w-6xl mx-auto px-4">
-            <h1 className="mb-12 text-4xl font-bold text-center text-gray-900">Technical Skills</h1>
+        <div id="skills" className="py-16 max-w-6xl mx-auto px-4 scroll-mt-[44px] lg:scroll-mt-[68px]">
+            <h1 className="mb-12 text-4xl font-bold text-center text-gray-800">Technical Skills</h1>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {Object.entries(skillsData).map(([category, data], index) => (
+                {Object.entries(skillsData).map(([category, data]) => (
                     <div 
                         key={category}
                         className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100"
@@ -45,7 +45,7 @@ export default function Skills() {
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-                            {data.skills.map((skill, skillIndex) => (
+                            {data.skills.map((skill) => (
                                 <span
                                     key={skill}
                                     className="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors"

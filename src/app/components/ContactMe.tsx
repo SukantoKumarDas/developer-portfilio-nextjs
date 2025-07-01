@@ -6,9 +6,9 @@ import Location from '@/../public/assets/logo/location.png';
 
 export default function ContactMe() {
     return (
-        <div id="contact" className="py-16 max-w-6xl mx-auto px-4">
+        <div id="contact" className="py-16 max-w-6xl mx-auto px-4 scroll-mt-[44px] lg:scroll-mt-[68px]">
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold text-gray-900 mb-2">Contact Me</h1>
+                <h1 className="text-4xl font-bold text-center text-gray-800">Contact Me</h1>
                 <p className="text-gray-600">
                     I am always open to collaborate
                 </p>
