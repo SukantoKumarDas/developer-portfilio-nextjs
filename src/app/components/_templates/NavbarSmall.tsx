@@ -18,17 +18,41 @@ export default function NavbarSmall() {
     const [isOpen, setIsOpen] = useState(false);
 
     const [hash, setHash] = useState<string>('');
-        
+    
     useEffect(() => {
+        const initialHash = window.location.hash || '#home';
+        setHash(initialHash);
+        
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = `#${entry.target.id}`;
+                        setHash(sectionId);
+                        
+                        // Optionally update URL hash without scrolling
+                        if (window.location.hash !== sectionId) {
+                            history.replaceState(null, '', sectionId);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+                rootMargin: '-20% 0px -20% 0px'
+            }
+        );
+        // Observe all sections
+        const sections = document.querySelectorAll('section[id], div[id]');
+        sections.forEach((section) => observer.observe(section));
         const updateHash = () => {
-            setHash(window.location.hash)
+            setHash(window.location.hash);
             setIsOpen(false)
         }
-        updateHash()
-        window.addEventListener('hashchange', updateHash)
-
+        updateHash();
+        window.addEventListener('hashchange', updateHash);
         return () => window.removeEventListener('hashchange', updateHash)
-    }, [])
+    }, []);
 
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>

@@ -4,5 +4,6 @@ export const navLinks = [
     { href: '#work-experience', label: 'Experience' },
     { href: '#projects', label: 'Projects' },
     { href: '#education', label: 'Education' },
+    { href: '#view-cv', label: 'View CV' },
     { href: '#contact', label: 'Contact' },
 ];

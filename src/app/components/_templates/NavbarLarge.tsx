@@ -10,18 +10,38 @@ export default function NavbarLarge() {
     const [hash, setHash] = useState<string>('');
     
     useEffect(() => {
+        const initialHash = window.location.hash || '#home';
+        setHash(initialHash);
+        
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const sectionId = `#${entry.target.id}`;
+                        setHash(sectionId);
+                        
+                        // Optionally update URL hash without scrolling
+                        if (window.location.hash !== sectionId) {
+                            history.replaceState(null, '', sectionId);
+                        }
+                    }
+                });
+            },
+            {
+                threshold: 0.5,
+                rootMargin: '-20% 0px -20% 0px'
+            }
+        );
+        // Observe all sections
+        const sections = document.querySelectorAll('section[id], div[id]');
+        sections.forEach((section) => observer.observe(section));
         const updateHash = () => {
             setHash(window.location.hash)
         }
-
-        // Get the hash on initial render
-        updateHash()
-
-        // Update hash when it changes (e.g. when navigating)
-        window.addEventListener('hashchange', updateHash)
-
+        updateHash();
+        window.addEventListener('hashchange', updateHash);
         return () => window.removeEventListener('hashchange', updateHash)
-    }, [])
+    }, []);
 
     return (
         <div className="left-0 w-full py-4 px-8 flex justify-between items-center text-white font-bold z-50 shadow-md">
