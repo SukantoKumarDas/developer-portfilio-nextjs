@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { navLinks } from '@/lib/data';
 import CvDownload from '../CvDownloadButton';
 import CustomLink from '../CustomLink';
 import { useEffect, useState } from 'react';
