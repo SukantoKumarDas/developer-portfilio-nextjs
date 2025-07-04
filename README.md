@@ -2,6 +2,8 @@
 
 A sleek, modern, and fully responsive single-page portfolio built with **Next.js**, styled using **Tailwind CSS**, and enhanced with **Shadcn UI components**. It includes a functional contact form powered by **Nodemailer** for sending emails directly from the site.
 
+Preview: https://portfolio-pvsl8whdz-sukanto-kumar-das.vercel.app/#projects
+
 ---
 
 ## ✨ Features
