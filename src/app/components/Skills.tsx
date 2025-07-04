@@ -1,26 +1,27 @@
 import React from 'react';
 import { Code, Database, Settings, Layers } from 'lucide-react';
+import { Profile } from '@/lib/data';
 
 export default function Skills() {
     const skillsData = {
         "Programming Languages": {
             icon: <Code className="w-6 h-6" />,
-            skills: ["PHP", "JavaScript", "C/C++", "SQL", "Java", "Python", "Solidity", "HTML", "CSS"],
+            skills: Profile.programmingLanguages,
             color: "from-blue-500 to-purple-600"
         },
         "Frameworks/Libraries": {
             icon: <Layers className="w-6 h-6" />,
-            skills: ["Laravel", "Codeigniter", "Bootstrap", "Tailwind CSS", "React.js", "Node.js", "Ether.js", "Express"],
+            skills: Profile.frameworksLibraries,
             color: "from-green-500 to-teal-600"
         },
         "Database": {
             icon: <Database className="w-6 h-6" />,
-            skills: ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Redis"],
+            skills: Profile.debuggers,
             color: "from-orange-500 to-red-600"
         },
         "Developer Tools": {
             icon: <Settings className="w-6 h-6" />,
-            skills: ["Git", "Github", "VsCode", "Linux", "Nginx"],
+            skills: Profile.developerTools,
             color: "from-purple-500 to-pink-600"
         }
     };

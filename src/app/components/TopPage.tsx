@@ -3,6 +3,7 @@ import myImage from '@/../public/assets/images/school.png';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { GithubIcon, Linkedin, MailIcon, Sparkles } from 'lucide-react';
+import { Profile } from '@/lib/data';
 
 export default function TopPage() {
     return (
@@ -26,18 +27,18 @@ export default function TopPage() {
 
                         {/* Name - More prominent */}
                         <h1 className="text-4xl lg:text-6xl font-black uppercase leading-tight">
-                            Sukanto Kumar Das
+                            {Profile.name}
                         </h1>
 
                         {/* Role */}
                         <div className="text-xl lg:text-2xl">
                             <span className="text-gray-300 font-normal">A Passionate </span>
-                            <span className="text-indigo-500 font-bold">Programmer</span>
+                            <span className="text-indigo-500 font-bold">{Profile.title}</span>
                         </div>
 
                         {/* Description - Shorter and punchier */}
                         <p className="text-gray-400 text-lg font-normal max-w-md mx-auto lg:mx-0">
-                            Building digital solutions with clean code and creativity.
+                            {Profile.description}
                         </p>
 
                         {/* Stats - Simplified */}
@@ -91,21 +92,21 @@ export default function TopPage() {
                         {/* Social Links - Simplified */}
                         <div className="w-auto lg:w-95 flex gap-4 justify-center">
                             <Link
-                                href={''}
+                                href={Profile.socialLinks.email}
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="Email"
                             >
                                 <MailIcon size={24} />
                             </Link>
                             <Link
-                                href={''}
+                                href={Profile.socialLinks.linkedin}
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin size={24} />
                             </Link>
                             <Link
-                                href={''}
+                                href={Profile.socialLinks.github}
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="GitHub"
                             >

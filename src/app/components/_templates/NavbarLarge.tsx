@@ -5,6 +5,7 @@ import { navLinks } from '@/lib/data';
 import CvDownload from '../CvDownloadButton';
 import CustomLink from '../CustomLink';
 import { useEffect, useState } from 'react';
+import { Profile }  from '@/lib/data';
 
 export default function NavbarLarge() {
     const [hash, setHash] = useState<string>('');
@@ -50,12 +51,12 @@ export default function NavbarLarge() {
                 href="#home"
                 className="uppercase text-2xl"
             >
-                Sukanto Kumar Das
+                {Profile.name}
             </Link>
 
             {/* Nav Links */}
             <div className="flex gap-6 text-lg">
-                {navLinks.map(link => (
+                {Profile.navLinks.map(link => (
                     <CustomLink
                         key={link.href}
                         link={link.href}

@@ -9,16 +9,17 @@ import Skills from './components/Skills';
 import TopPage from './components/TopPage';
 import ViewCV from './components/ViewCV';
 import Divider from './components/_templates/Divider';
+import { Profile } from '@/lib/data';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: 'Sukanto - Full Stack Developer Portfolio',
-  description: 'Professional portfolio showcasing web development projects, skills, and experience in React, Next.js, and modern web technologies.',
-  keywords: ['web developer', 'full stack', 'react', 'nextjs', 'portfolio'],
-  authors: [{ name: 'Your Name' }],
+  title: Profile.name + ' - Portfolio',
+  description: Profile.description,
+  keywords: Profile.keywords.join(', '),
+  authors: [{ name: Profile.name }],
   openGraph: {
-    title: 'Sukanto - Portfolio',
-    description: 'Professional web developer portfolio',
+    title: Profile.name + ' - Portfolio',
+    description: Profile.description,
     type: 'website',
   },
 };

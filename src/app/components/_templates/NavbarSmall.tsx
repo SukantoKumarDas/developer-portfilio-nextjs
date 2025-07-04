@@ -10,8 +10,8 @@ import {
 import { MenuIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import CvDownload from '../CvDownloadButton';
-import { navLinks } from '@/lib/data';
 import CustomLink from '../CustomLink';
+import { Profile } from '@/lib/data';
 
 
 export default function NavbarSmall() {
@@ -64,7 +64,7 @@ export default function NavbarSmall() {
                 <SheetHeader>
                     <SheetTitle className="mt-10 text-white">
                         <div className="flex flex-col gap-4 text-lg">
-                            {navLinks.map(link => (
+                            {Profile.navLinks.map(link => (
                                 <CustomLink
                                     key={link.href}
                                     link={link.href}
