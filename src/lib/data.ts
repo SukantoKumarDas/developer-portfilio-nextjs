@@ -5,12 +5,12 @@ export const Profile = {
     keywords: ['web developer', 'full stack', 'react', 'nextjs', 'portfolio'], // Keywords for SEO
     image: '/images/profile.jpg',
     socialLinks: {
-        github: '',
-        linkedin: '',
+        github: 'https://github.com/SukantoKumarDas',
+        linkedin: 'https://www.linkedin.com/in/sukantokumardas/',
         twitter: '',
         website: '',
-        phone_numver: '',
-        email: '',
+        phone_numver: '+880-1797521254',
+        email: 'sukanto.k.das@gmail.com',
     },
     navLinks: [
         { href: '#home', label: 'Home' },

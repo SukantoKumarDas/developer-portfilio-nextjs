@@ -12,7 +12,7 @@ export default function TopPage() {
             className="text-white font-bold bg-gradient-to-br from-zinc-800 to-zinc-900 scroll-mt-[44px] lg:scroll-mt-[68px]"
         >
             <div className="max-w-7xl mx-auto">
-                <div className="px-4 lg:px-8 py-5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen">
+                <div className="px-4 lg:px-8 py-5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-44px)] lg:min-h-[calc(100vh-68px)]">
                     
                     {/* Left Column */}
                     <div className="space-y-8 text-center lg:text-left">
@@ -42,22 +42,24 @@ export default function TopPage() {
                         </p>
 
                         {/* Stats - Simplified */}
-                        <div className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
                             {[
                                 { number: "10+", label: ["Projects", " Completed"] },
                                 { number: "2+", label: ["Years", " Experience"] },
                                 { number: "12+", label: ["Technologies", " Mastered"] },
                             ].map((stat, index) => (
                                 <div key={index} className="text-center p-4 bg-zinc-800 rounded-lg border border-zinc-700 hover:border-indigo-400/50 hover:scale-105 transition-colors">
-                                    <h3 className="text-2xl text-indigo-400 font-bold mb-1">
-                                        {stat.number}
-                                    </h3>
-                                    <p className="text-sm text-gray-300 leading-tight">
-                                        {stat.label[0]}
-                                    </p>
-                                    <p className="text-sm text-gray-300 leading-tight">
-                                        {stat.label[1]}
-                                    </p>
+                                    <div className='flex flex-row sm:flex-col justify-center items-center gap-2 sm:gap-0'>
+                                        <h3 className="text-2xl text-indigo-400 font-bold mb-1">
+                                            {stat.number}
+                                        </h3>
+                                        <p className="text-sm text-gray-300 leading-tight">
+                                            {stat.label[0]}
+                                        </p>
+                                        <p className="text-sm text-gray-300 leading-tight">
+                                            {stat.label[1]}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -93,6 +95,7 @@ export default function TopPage() {
                         <div className="w-auto lg:w-95 flex gap-4 justify-center">
                             <Link
                                 href={Profile.socialLinks.email}
+                                target="_blank"
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="Email"
                             >
@@ -100,6 +103,7 @@ export default function TopPage() {
                             </Link>
                             <Link
                                 href={Profile.socialLinks.linkedin}
+                                target="_blank"
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="LinkedIn"
                             >
@@ -107,6 +111,7 @@ export default function TopPage() {
                             </Link>
                             <Link
                                 href={Profile.socialLinks.github}
+                                target="_blank"
                                 className="p-3 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-indigo-400 hover:text-indigo-400 transition-all duration-200"
                                 aria-label="GitHub"
                             >

@@ -1,3 +1,4 @@
+import { Profile } from "@/lib/data";
 import { BookMarkedIcon, ExternalLinkIcon, Github, GithubIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -127,7 +128,7 @@ export default function Projects() {
                 </div>
             </div>
             <div className="flex flex-row justify-center">
-                <Link href=""  target="_blank" rel="noopener noreferrer" className="w-fit px-6 py-2 flex flex-row gap-2 bg-indigo-300 hover:bg-indigo-400 rounded-sm">
+                <Link href={Profile.socialLinks.github}  target="_blank" rel="noopener noreferrer" className="w-fit px-6 py-2 flex flex-row gap-2 bg-indigo-300 hover:bg-indigo-400 rounded-sm">
                     <ExternalLinkIcon></ExternalLinkIcon>
                     <span>view more on github</span>
                 </Link>
