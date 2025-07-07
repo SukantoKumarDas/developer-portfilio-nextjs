@@ -27,7 +27,7 @@ export default function Skills() {
     };
 
     return (
-        <div id="skills" className="py-16 max-w-6xl mx-auto px-4 scroll-mt-[44px] lg:scroll-mt-[68px]">
+        <div id="skills" className="py-16 max-w-7xl mx-auto px-8 scroll-mt-[44px] lg:scroll-mt-[68px]">
             <h1 className="mb-12 text-4xl font-bold text-center text-gray-800">Technical Skills</h1>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
