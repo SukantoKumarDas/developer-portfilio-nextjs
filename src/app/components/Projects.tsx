@@ -1,4 +1,5 @@
 import { Profile } from "@/lib/data";
+import { techColorsTyoe } from "@/lib/types";
 import { BookMarkedIcon, ExternalLinkIcon, Github, GithubIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -49,7 +50,7 @@ export default function Projects() {
         }
     ];
 
-    const techColors = {
+    const techColors: techColorsTyoe = {
         "PHP": "bg-blue-100 text-blue-800",
         "Laravel": "bg-red-100 text-red-800",
         "Bootstrap": "bg-purple-100 text-purple-800",
@@ -98,9 +99,9 @@ export default function Projects() {
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
-                                    {project.technologies.map((tech, techIndex) => (
+                                    {project.technologies.map((tech, index) => (
                                         <span 
-                                            key={techIndex}
+                                            key={index}
                                             className={`px-2 py-1 text-xs rounded ${techColors[tech] || 'bg-gray-100 text-gray-800'}`}
                                         >
                                             {tech}

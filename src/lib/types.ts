@@ -14,3 +14,7 @@ export type SendMailReq = {
     subject?: string;
     message: string;
 };
+
+export type techColorsTyoe = {
+    [key: string]: string;
+}
