@@ -1,5 +1,5 @@
 import { Profile } from "@/lib/data";
-import { techColorsTyoe } from "@/lib/types";
+import { techColorsType } from "@/lib/types";
 import { BookMarkedIcon, ExternalLinkIcon, Github, GithubIcon } from "lucide-react";
 import Link from "next/link";
 
@@ -50,7 +50,7 @@ export default function Projects() {
         }
     ];
 
-    const techColors: techColorsTyoe = {
+    const techColors: techColorsType = {
         "PHP": "bg-blue-100 text-blue-800",
         "Laravel": "bg-red-100 text-red-800",
         "Bootstrap": "bg-purple-100 text-purple-800",

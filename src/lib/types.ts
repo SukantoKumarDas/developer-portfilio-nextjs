@@ -15,6 +15,6 @@ export type SendMailReq = {
     message: string;
 };
 
-export type techColorsTyoe = {
+export type techColorsType = {
     [key: string]: string;
 }
